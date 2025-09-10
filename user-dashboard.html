@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - EventPro</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>EventPro</h1>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+            <div class="payment-section" id="paymentOptions" style="display: none; margin-top:20px;">
+    <h3>Complete Your Payment</h3>
+    <p>Select a payment method:</p>
+    <div class="payment-buttons">
+        <!-- GPay -->
+        <a href="upi://pay?pa=your-upi-id@okicici&pn=EventPro&mc=0000&tid=123456&am=500&cu=INR&tn=Event%20Payment" 
+           class="btn btn-primary">
+           Pay with GPay
+        </a>
+        
+        <!-- PhonePe -->
+        <a href="upi://pay?pa=your-upi-id@okicici&pn=EventPro&mc=0000&tid=123456&am=500&cu=INR&tn=Event%20Payment" 
+           class="btn btn-secondary">
+           Pay with PhonePe
+        </a>
+        
+        <!-- Card Payment (via Razorpay demo link or Stripe checkout) -->
+        <button class="btn btn-danger" onclick="payWithCard(500)">Pay with Card</button>
+    </div>
+</div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome, <span id="userName">User</span>!</h1>
+                <p>Manage your events and bookings from your personal dashboard.</p>
+            </div>
+
+            <!-- User’s registered events -->
+            <div class="dashboard-cards" id="userEvents">
+                <!-- Events will be loaded dynamically by script.js -->
+            </div>
+
+            <!-- Book another event button -->
+            <div class="dashboard-actions" style="text-align: center; margin-top: 40px;">
+                <a href="new-event.html" class="btn btn-primary">Book Another Event</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EventPro</h3>
+                    <p>Creating memorable experiences for every occasion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@eventpro.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EventPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
